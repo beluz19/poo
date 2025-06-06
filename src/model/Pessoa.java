@@ -8,6 +8,7 @@ public class Pessoa {
     private String cidade;
     private String email;
     private Endereco endereco;
+    private boolean dependentes;
 
     public Pessoa(){}
 
@@ -51,6 +52,10 @@ public class Pessoa {
         return endereco;
     }
 
+    public boolean hasDependentes() {
+        return dependentes;
+    }
+
     public void setNome(String nome) {
         this.nome = nome;
     }
@@ -70,6 +75,18 @@ public class Pessoa {
     public void setEndereco(Endereco endereco) {
         this.endereco = endereco;
     }
+
+    public void setDependentes(boolean dependentes) {
+        this.dependentes = dependentes;
+    }
+
+    @Override
+    public String toString() {
+        return "Pessoa [id=" + id + ", nome=" + nome + ", idade=" + idade + ", cidade=" + cidade + ", email=" + email
+                + ", endereco=" + endereco + ", dependentes=" + dependentes + "]";
+    }
+
+    
 
     
 }

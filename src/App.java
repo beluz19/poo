@@ -1,10 +1,44 @@
 import model.Endereco;
 import model.Estados;
+import model.Gestor;
 import model.Pessoa;
+import model.Trabalhador;
 import util.ClonarEndereco;
 
 public class App {
-    public static void main(String[] args) throws Exception {
+
+    public static void main(String[] args) {
+        var pessoa = new Pessoa(
+        "Bernardo Luz",
+         19, 
+         "Novo Hamburgo", 
+         "bernardo.pacheco@gamil.com");
+
+         System.out.println(pessoa);
+
+         var trabalhador = new Trabalhador(
+        "Bernardo Luz",
+         19, 
+         "Novo Hamburgo", 
+         "bernardo.pacheco@gamil.com",
+         "Operador",
+         5000);
+
+         System.out.println(trabalhador);
+         System.out.println(trabalhador.getEmail());
+
+         System.out.println(trabalhador instanceof Pessoa);
+         System.out.println(pessoa instanceof Trabalhador);
+         System.out.println(trabalhador instanceof Trabalhador);
+
+         var gestor = new Gestor();
+         System.out.println(gestor);
+
+
+
+    }
+
+    public void oopBasico() {
         
         var pessoa = new Pessoa(
         "Bernardo Luz",
